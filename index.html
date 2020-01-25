@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>12 Rules of Life</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,800|Raleway:800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="main-page" id="sect-2">
+      <img class="bg group-1" src="./img/Vector-bg-left.png" alt="" />
+      <img class="bg group-2" src="./img/Vector-bg-right.png" alt="" />
+      <img class="bg group-3" src="./img/vector-1-left.png" alt="" />
+      <img class="bg group-4" src="./img/vector-2-right.png" alt="" />
+
+      <a href="https://www.jordanbpeterson.com/12-rules-for-life/">
+        <button class="get-book">GET BOOK <span>📖</span></button>
+      </a>
+
+      <div class="name">
+        <h1><a href="https://www.jordanbpeterson.com/">JORDAN PETERSON</a></h1>
+        <img src="./bearded-person.png" alt="" width="2%" height="2%" />
+      </div>
+
+      <h3>12 RULES OF LIFE</h3>
+
+      <div class="take-me">
+        <p class="take-me-btn"> <a href="#info-page">Take me through</a> </p>
+        <img src="./run.png " alt="" />
+      </div>
+      <a class="down-arrow" href="#info-page">
+        <img src="./Group 17.png" alt="go down" />
+      </a>
+    </section>
+    <section class="info-page" id="info-page">
+      <div class="info-page-div">
+        <h2 class="info-page-title">The 12 Rules</h2>
+        <img src="./img/scroll.png" width="3%" height="3%" alt="" />
+      </div>
+      <hr />
+      <div class="sect-2-all-info">
+        <button onclick="openOverlay(1)" id="1">1</button>
+        <button onclick="openOverlay(2)" id="2">2</button>
+        <button onclick="openOverlay(3)" id="3">3</button>
+        <button onclick="openOverlay(4)" id="4">4</button>
+        <button onclick="openOverlay(5)" id="5">5</button>
+        <button onclick="openOverlay(6)" id="6">6</button>
+        <button onclick="openOverlay(7)" id="7">7</button>
+        <button onclick="openOverlay(8)" id="8">8</button>
+        <button onclick="openOverlay(9)" id="9">9</button>
+        <button onclick="openOverlay(10)" id="10">10</button>
+        <button onclick="openOverlay(11)" id="11">11</button>
+        <button onclick="openOverlay(12)" id="12">12</button>
+      </div>
+
+      <span class="giveinfo dontshowit">
+        <div class="header">
+          <h3>Rule 1</h3>
+          <button class="closeOverlayBtn" onclick="closeOverlay(0)">+</button>
+        </div>
+        <p></p>
+        <p></p>
+      </span>
+      <img class="sun-img" src="./img/sun.png" alt="" />
+
+      <img
+        src="./img/sect-2-img.png"
+        width=""
+        height=""
+        alt=""
+        class="sect-2-bg"
+      />
+    </section>
+
+    <script>
+      const info_span = document.querySelector(".giveinfo");
+
+      const closeOverlayBtn = document.querySelector(".closeOverlayBtn");
+
+      function openOverlay(btn_id) {
+        info_span.className = "giveinfo showit";
+        const title = info_span.children[0].children[0];
+        title.innerText = `Rule ${btn_id}`;
+        const body_head = info_span.children[1];
+        const body_body = info_span.children[2];
+        switch (btn_id) {
+          case 1:
+            body_head.innerHTML =
+              "<b>Stand up straight with your shoulders back</b>";
+            body_body.innerText =
+              "Quit drooping and hunching around.Speak your mind. Put your desires forward, as if you had a right to them—at least the same right as others.Walk tall and gaze forthrightly ahead. Dare to be dangerous. Encourage the serotonin to flow plentifully through the neural pathways desperate for its calming influence.";
+            break;
+          case 2:
+            body_head.innerHTML =
+              "<b>Treat Yourself Like Someone You Are Responsible for Helping</b>";
+            body_body.innerText =
+              'To treat yourself as if you were someone you are responsible for helping is, instead, to consider what would be truly good for you. This is not “what you want.” It is also not “what would make you happy". You need to consider the future and think, “What might my life look like if I were caring for myself properly?”';
+            break;
+          case 3:
+            body_head.innerHTML =
+              "<b>Make Friends with People Who Want the Best For You</b>";
+            body_body.innerText =
+              "Don’t think that it is easier to surround yourself with good healthy people than with bad unhealthy people. It’s not. A good, healthy person is an ideal. It requires strength and daring to stand up near such a person. Have some humility. Have some courage. Use your judgment, and protect yourself from too-uncritical compassion and pity.";
+            break;
+          case 4:
+            body_head.innerHTML =
+              "<b>Compare Yourself to Who You Were Yesterday, Not Who Someone Else is Today</b>";
+            body_body.innerText =
+              "Pay attention. Focus on your surroundings, physical and psychological. Notice something that bothers you, that concerns you, that will not let you be, which you could fix, that you would fix. You can find such somethings by asking yourself (as if you genuinely want to know) three questions:“What is it that is bothering me?” “Is that something I could fix?” and “Would I actually be willing to fix it?” If you find that the answer is “no,” to any or all of the questions, then look elsewhere. Aim lower. Search until you find something that bothers you, that you could fix, that you would fix, and then fix it. That might be enough for the day.";
+            break;
+          case 5:
+            body_head.innerHTML =
+              "<b>Do Not Let Your Children Do Anything that Makes You Dislike Them</b>";
+            body_body.innerText =
+              "Parents have a duty to act as proxies for the real world—merciful proxies, caring proxies—but proxies, nonetheless. This obligation supersedes any responsibility to ensure happiness, foster creativity, or boost self-esteem. It is the primary duty of parents to make their children socially desirable.";
+            break;
+          case 6:
+            body_head.innerHTML =
+              "<b>Set Your House in Perfect Order Before You Criticize the World</b>";
+            body_body.innerText =
+              "Have you cleaned up your life? If the answer is no, here’s something to try: Start to stop doing what you know to be wrong. Start stopping today. Don’t waste time questioning how you know that what you’re doing is wrong, if you are certain that it is. Don’t reorganize the state until you have ordered your own experience. Have some humility. If you cannot bring peace to your household, how dare you try to rule a city?";
+            break;
+          case 7:
+            body_head.innerHTML =
+              "<b>Pursue What is Meaningful (Not What is Expedient)</b>";
+            body_body.innerText =
+              "To have meaning in your life is better than to have what you want, because you may neither know what you want, nor what you truly need. Meaning is something that comes upon you, of its own accord. You can set up the preconditions, you can follow meaning, when it manifests itself, but you cannot simply produce it, as an act of will. What is expedient works only for the moment. It’s immediate, impulsive and limited. What is meaningful, by contrast, is the organization of what would otherwise merely be expedient into a symphony of Being.";
+            break;
+          case 8:
+            body_head.innerHTML =
+              "<b>Tell the Truth, or at least Don’t Lie</b>";
+            body_body.innerText =
+              "If your life is not what it could be, try telling the truth. If you cling desperately to an ideology, or wallow in nihilism, try telling the truth. If you feel weak and rejected, and desperate, and confused, try telling the truth. In Paradise, everyone speaks the truth. That is what makes it Paradise. Tell the truth. Or, at least, don’t lie.";
+            break;
+          case 9:
+            body_head.innerHTML =
+              "<b>Assume that the Person You Are Listening to Might Know Something You Don’t</b>";
+            body_body.innerText =
+              'Carl Rogers, one of the twentieth century’s great psychotherapists, knew something about listening. He wrote, “The great majority of us cannot listen; we find ourselves compelled to evaluate, because listening is too dangerous." The first requirement is courage, and we do not always have.If you listen, instead, without premature judgment, people will generally tell you everything they are thinking—and with very little deceit. People will tell you the most amazing, absurd, interesting things. Very few of your conversations will be boring.';
+            break;
+          case 10:
+            body_head.innerHTML = "<b>Be Precise in Your Speech</b>";
+            body_body.innerText =
+              "Confront the chaos of Being. Take aim against a sea of troubles. Specify your destination, and chart your course. Admit to what you want. Tell those around you who you are. Narrow, and gaze attentively, and move forward, forthrightly. Be precise in your speech.";
+            break;
+          case 11:
+            body_head.innerHTML =
+              "<b>Do Not Bother Children when they are Skateboarding</b>";
+            body_body.innerText =
+              "we prefer to live on the edge. There, we can still be both confident in our experience and confronting the chaos that helps us develop. We’re hard-wired, for that reason, to enjoy risk (some of us more than others). We feel invigorated and excited when we work to optimize our future performance, while playing in the present. Otherwise we lumber around, sloth-like, unconscious, unformed and careless. Overprotected, we will fail when something dangerous, unexpected and full of opportunity suddenly makes its appearance, as it inevitably will.";
+            break;
+          case 12:
+            body_head.innerHTML =
+              "<b>Pet a Cat When You Encounter One on the Street</b>";
+            body_body.innerText =
+              "Set aside some time to talk and to think about the illness or other crisis and how it should be managed every day. Do not talk or think about it otherwise. If you do not limit its effect, you will become exhausted, and everything will spiral into the ground. This is not helpful. Conserve your strength. You’re in a war, not a battle, and a war is composed of many battles. You must stay functional through all of them. When worries associated with the crisis arise at other times, remind yourself that you will think them through, during the scheduled period.";
+            break;
+
+          default:
+            body_head.innerHTML = "";
+            body_body.innerText = "";
+            break;
+        }
+      }
+      function closeOverlay(btn_id) {
+        info_span.className = "giveinfo dontshowit";
+      }
+    </script>
+  </body>
+</html>
